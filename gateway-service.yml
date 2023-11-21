@@ -1,6 +1,11 @@
 spring:
  application:
   name: gateway-service
+ security:
+  oauth2:
+   resourceserver:
+    jwt:
+     issuer-uri: http://localhost:8080/realms/pruebaMicro
  cloud:
   config:
    discovery:
@@ -20,3 +25,5 @@ spring:
         - Path=/products
 server:
  port: 8084
+
+
