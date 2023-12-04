@@ -12,6 +12,8 @@ spring:
     enable: true
     serviceId: config-service
   gateway:
+   default-filters:
+    - TokenRelay=
    routes:
     - id: checkout-service
       uri: lb://checkout-service
